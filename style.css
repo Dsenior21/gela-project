@@ -1,0 +1,251 @@
+/* css/style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+    line-height: 1.7; /* Mayor espaciado para lectura */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Un gris aún más claro */
+    color: #212529; /* Un negro no tan intenso */
+}
+
+header {
+    background: #343a40; /* Un gris oscuro más suave */
+    color: #fff;
+    padding: 1.5rem 0; /* Un poco más de padding */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem; /* Un poco más grande */
+    font-weight: 300; /* Fuente más ligera para el título */
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Más espacio entre ítems del menú */
+}
+
+nav ul li a {
+    color: #e9ecef; /* Un blanco menos brillante para los enlaces */
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: color 0.3s ease; /* Transición suave para hover */
+}
+
+nav ul li a:hover,
+nav ul li a.activo { /* Clase 'activo' para la página actual */
+    color: #fff;
+    border-bottom: 2px solid #007bff; /* Indicador visual para hover/activo */
+    padding-bottom: 5px;
+}
+
+main {
+    padding: 25px;
+    max-width: 1100px; /* Un poco más de ancho */
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra más pronunciada */
+}
+
+main h2 {
+    color: #007bff; /* Azul primario para títulos de sección */
+    border-bottom: 3px solid #dee2e6; /* Borde inferior más sutil */
+    padding-bottom: 15px;
+    font-size: 2rem;
+    margin-top: 0; /* Quitar margen superior del primer h2 en main */
+}
+
+.entrada-blog {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e9ecef; /* Borde más claro */
+}
+
+.entrada-blog:last-child {
+    border-bottom: none;
+}
+
+.entrada-blog img {
+    margin-right: 20px;
+    float: left;
+    border-radius: 4px; /* Bordes redondeados para imágenes */
+    border: 1px solid #dee2e6;
+}
+
+.entrada-blog h3 a {
+    color: #343a40;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.entrada-blog h3 a:hover {
+    color: #007bff;
+}
+
+.entrada-blog p {
+    font-size: 1.05rem; /* Ligeramente más grande para el cuerpo del texto */
+}
+
+.entrada-blog small {
+    font-size: 0.85rem;
+    color: #6c757d; /* Gris secundario para metadatos */
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #343a40;
+    color: #e9ecef;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #007bff; /* Azul para enlaces en el footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    text-decoration: underline;
+}
+
+/* Estilos generales para imágenes responsivas */
+img {
+    max-width: 100%; /* Asegura que las imágenes no se desborden de su contenedor */
+    height: auto;   /* Mantiene la proporción de la imagen */
+    display: block; /* Evita espacio extra debajo de las imágenes inline */
+}
+
+/* Estilos adicionales para la galería tipo blog en style.css */
+
+#galeria-principal h2 { /* Título principal de la página de galería */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+#galeria-principal > p.descripcion-pagina-galeria { /* El párrafo introductorio de la galería */
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grupo-galeria {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 40px; /* Espacio entre grupos de galería */
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    overflow: hidden; /* Para contener floats si se usan */
+}
+
+.info-grupo h3 {
+    font-size: 1.8rem;
+    color: #28a745; /* Un color distintivo para el título del grupo (verde) */
+    margin-top: 0;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+}
+
+.fecha-grupo {
+    font-size: 0.9rem;
+    color: #6c757d; /* Gris secundario */
+    margin-bottom: 12px;
+    display: block; /* Asegurar que ocupe su propia línea */
+}
+
+.descripcion-grupo {
+    font-size: 1rem;
+    color: #495057; /* Un gris más oscuro para la descripción */
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.imagenes-grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: flex-start;
+}
+
+.foto-item {
+    background-color: #f8f9fa; /* Fondo claro para cada item */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    /* Ajusta el width para controlar cuántos items por fila.
+       Ej: calc(33.333% - (gap * 2 / 3)) para 3 por fila con gap.
+       Para simplificar, podemos usar flex-basis y permitir que crezcan. */
+    flex-basis: calc(33.333% - 20px); /* Para 3 por fila, ajusta el 20px según el gap */
+    min-width: 250px; /* Ancho mínimo antes de que se rompa demasiado */
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+.foto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.foto-item img { /* La imagen dentro de cada .foto-item */
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+}
+
+.foto-item p.caption-foto { /* El pie de foto */
+    font-size: 0.95rem;
+    color: #495057;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Media Queries para responsividad de la galería */
+@media (max-width: 992px) { /* Tablets y pantallas medianas */
+    .foto-item {
+        flex-basis: calc(50% - 15px); /* 2 por fila */
+    }
+    .info-grupo h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) { /* Móviles */
+    .foto-item {
+        flex-basis: 100%; /* 1 por fila */
+        margin-bottom: 20px;
+    }
+    .imagenes-grupo {
+        gap: 0; /* Quitar gap si cada item es 100% width y tiene su propio margen */
+    }
+    .info-grupo h3 {
+        font-size: 1.4rem;
+    }
+    .descripcion-grupo {
+        font-size: 0.95rem;
+    }
+    #galeria-principal h2 {
+        font-size: 1.8rem;
+    }
+}
